@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content%}
+    <h2>Annonces</h2>
+    <div class="grid-container">
+        {% for annonce in annonces %}
+        <div class="post">
+            <a href="{% url 'annonce-detail' annonce.id %}">
+                <h4>{{ annonce.titre }}</h4>
+                <img src="{{ annonce.image.url }}">
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock content%}

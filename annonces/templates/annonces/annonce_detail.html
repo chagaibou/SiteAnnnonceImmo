@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+  <p>{{ annonce.titre }}</p>
+  <img src="{{ annonce.image.url }}">
+  <p>{{ annonce.description }}</p>
+{% endblock %}

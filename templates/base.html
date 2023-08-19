@@ -1,0 +1,23 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'app.css' %}">
+</head>
+<body>
+    <div class="sidebar">
+     <h2>KKANNONCE</h2>
+        <p><a href="{% url 'home' %}">Accueil</a></p>
+        <p><a href="{% url 'publier-annonce' %}">Publier une annonce</a></p>
+        <p><a href="{% url 'logout' %}">Se déconnecter</a></p>
+        <p><a href="{% url 'login' %}">Se Connecter</a></p>
+        <p><a href="{% url 'signup' %}">Créer un Compte</a></p>
+        <p><a href="{% url 'password_change' %}">Changer de mot de passe</a></p>
+
+     </div>
+    <div class="main">
+            {% block content %}{% endblock content %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Publier Annonce</h2>
+    <form  method="post" enctype="multipart/form-data">
+        <h2>Donner les details de l'annonce</h2>
+            {{ annonceDetailForm.as_p }}
+         <h2>Caractéristiques supplémentaires</h2>
+            {{ caracteristiquesForm.as_p }}
+            <h2>Donner les infos de l'emplacement</h2>
+            {{ emplacementForm.as_p }}
+        <h2>Donner la description de l'annonce</h2>
+        {{ annonceForm.as_p }}
+
+        {% csrf_token %}
+        <button type="submit">Publier</button>
+    </form>
+{% endblock content %}
